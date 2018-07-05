@@ -1,0 +1,2 @@
+class NewsWidget < ApplicationRecord
+end

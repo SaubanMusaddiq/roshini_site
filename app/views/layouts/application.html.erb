@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Roshini - <%= content_for?(:title) ? yield(:title) : "Roshini Site" %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Language" content="EN; AR" />
+    <meta data-react-helmet="true" name="keywords" content="Roshini, Car Spare, Car, Accesories, Auto,Bangalore, Spare Parts, Maruthi, tata, Automibile"/>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+       
+    <link rel="icon" type="image/png" href="/images/ico.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="/plugins/menucool/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="/plugins/menucool/js-image-slider.js" type="text/javascript"></script>
+
+    <%= yield :page_links %>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+  	<div id="header-wrapper" class ="<%= yield(:page_type) %>">
+      <div id="header" class="container">
+          <div id="logo"><h1><a href="#">Roshini</a></h1></div>
+            <nav id="nav">
+                <ul>
+                    <li><%= link_to "Home", root_path, :class => current_class?(root_path)  %></li>
+                    <li><%= link_to "News", news_path, :class => current_class?(news_path)  %></li>
+                    <li><%= link_to "Products", products_path, :class => current_class?(products_path)  %></li>
+                    <li><%= link_to "Qoutations", qoutations_path, :class => current_class?(qoutations_path)  %></li>
+                    <li><%= link_to "Contact Us", contact_us_path, :class => current_class?(contact_us_path)  %></li>
+                   <!--  <li class="current_page_item"><a href="/">Home</a></li>
+                    <li class=""><a href="/news">News</a></li>
+                    <li class=""><a href="/products">Products</a></li>
+                    <li class=""><a href="/qoutations">Qoutations</a></li>
+                    <li class=""><a href="/contact_us">Contact Us</a></li> -->
+                </ul>
+            </nav>
+        </div>
+        <%= yield(:banner_content) %>
+      </div>      
+    </div>
+  	 <div id="page-content">	
+    	<%= yield %>
+	</div>
+	<div id="footer">
+    <ul class="items">
+        <li><a class="footer-1" href="#header">About-us</a></li>
+        <li><a class="footer-2" href="#header">Contact-us</a></li>
+    </ul>
+    <div id="cp-right"> 
+      <p>© 2018 Roshini Auto Accesories</p>
+    </div>
+  </div>
+  <%= yield :script_tags %>
+    <script src="/js/site.js"></script> 
+  </body>
+</html>

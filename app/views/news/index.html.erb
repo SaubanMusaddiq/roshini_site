@@ -1,0 +1,106 @@
+<% content_for :title, "News" %>
+<% content_for :style_tags do%>
+<% end %>
+
+<div id="page">
+	<div class="container">
+    	<div class="row">
+        	<div id="news-content" class="col-md-12">
+                <div class="news-unit"> 
+                <article>
+                    <header>
+                        <h2>Praesent mattis condimentum</h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="sliderFrame1" class="sliderFrame-class">
+                                <div id="slider1" class="slider-class">
+                                    <img src="/images/news/image-slider-1.jpg" alt="Welcome to slider" />
+                                    <img src="/images/news/image-slider-2.jpg" />
+                                    <img src="/images/news/image-slider-3.jpg" alt="something" />
+                                    <img src="/images/news/image-slider-4.jpg" alt="htmlcaption" />
+                                    <img src="/images/news/image-slider-5.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p>This is <strong>MegaCorp</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
+                            <a href="#" class="button button-style1">Read More</a>
+                        </div>  
+                    </div>    
+                </article>
+                </div>
+                <div class="news-unit"> 
+                <article>
+                    <header>
+                        <h2>Praesent mattis condimentum</h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="sliderFrame2" class="sliderFrame-class">
+                                <div id="slider2"  class="slider-class">
+                                    <img src="/images/news/01.jpg" alt="Welcome to slider" />
+                                    <img src="/images/news/02.jpg" />
+                                    <img src="/images/news/03.jpg" alt="something" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p>This is <strong>MegaCorp</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
+                            <a href="#" class="button button-style1">Read More</a>
+                        </div>  
+                    </div>    
+                </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" class="image-style1"><img src="images/news/01.jpg" alt=""></a>
+<script type="text/javascript">
+    $(function(){
+        var sliderOptions1=
+        {
+            sliderId: "slider1",
+            startSlide: 0,
+            effect: "08",
+            effectRandom: false,
+            pauseTime: 2600,
+            transitionTime: 500,
+            slices: 12,
+            boxes: 8,
+            hoverPause: 1,
+            autoAdvance: true,
+            thumbnailsWrapperId: "thumbs",
+            m: false,
+            license: "mylicense"
+        };
+        var imageSlider1=new mcImgSlider(sliderOptions1);
+
+        var  sliderOptions2=
+        {
+            sliderId: "slider2",
+            startSlide: 0,
+            effect: "08",
+            effectRandom: false,
+            pauseTime: 2600,
+            transitionTime: 500,
+            slices: 12,
+            boxes: 8,
+            hoverPause: 1,
+            autoAdvance: true,
+            thumbnailsWrapperId: "thumbs",
+            m: false,
+            license: "mylicense"
+        };
+        imageSlider2=new mcImgSlider(sliderOptions2);
+        // imageSlider1.reload();
+        // imageSlider2.reload();
+    })
+</script>
+
+<% content_for :scrypt_tags do%>    
+<% end %>
+
+  
+

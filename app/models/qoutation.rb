@@ -1,0 +1,2 @@
+class Qoutation < ApplicationRecord
+end
